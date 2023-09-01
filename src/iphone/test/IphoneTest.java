@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import src.iphone.Devices.Iphone;
+import src.iphone.devices.Iphone;
 import src.iphone.interfaces.MultiMedia;
 import src.iphone.model.Contact;
 import src.iphone.model.Music;

@@ -1,4 +1,4 @@
-package src.iphone.Devices;
+package src.iphone.devices;
 
 import src.iphone.apps.Ipod;
 import src.iphone.apps.Phone;
