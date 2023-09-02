@@ -6,9 +6,11 @@ import java.util.List;
 
 import src.iphone.devices.Iphone;
 import src.iphone.interfaces.MultiMedia;
+import src.iphone.model.AudioMessage;
 import src.iphone.model.Contact;
 import src.iphone.model.Music;
 import src.iphone.model.Video;
+import src.iphone.model.VoiceMailMessage;
 
 public class IphoneTest {
     public static void main(String[] args) {
@@ -40,12 +42,29 @@ public class IphoneTest {
         Contact contact = new Contact("John Wick", "11978787878");
         iphone.phone().call(contact);
         
-        List<String> messageVoiceMailList = new ArrayList<>();
-        Collections.addAll(messageVoiceMailList, "Message 1", "Message 2", "Message 3","Message 4","Message 5");
-        iphone.phone().visualVoiceMail().addVoiceMailList(messageVoiceMailList);
+        
+        
+        VoiceMailMessage voiceMailMessage = new VoiceMailMessage("Ana", new AudioMessage("Message from Ana"));
+        iphone.phone().visualVoiceMail().addVoiceMail(voiceMailMessage);
+        iphone.phone().startVoiceMail(voiceMailMessage);
         iphone.phone().visualVoiceMail().getAllVoiceMails();
-        iphone.phone().visualVoiceMail().startVoiceMail("Message 2");
-        iphone.phone().visualVoiceMail().deleteVoiceMail("Message 2");
+
+        System.out.println("");
+        List<VoiceMailMessage> voiceMailMessagesList = new ArrayList<>();
+        Collections.addAll(voiceMailMessagesList, 
+            new VoiceMailMessage("Pedro", new AudioMessage("Message from Pedro")),
+            new VoiceMailMessage("Richard", new AudioMessage("Message from Richard")),
+            new VoiceMailMessage("Lucas", new AudioMessage("Message from Lucas")),
+            new VoiceMailMessage("Jacó", new AudioMessage("Message from Jacó")),
+            new VoiceMailMessage("Thiago", new AudioMessage("Message from Thiago")),
+            new VoiceMailMessage("Neymar", new AudioMessage("Message from Neymar"))
+        );
+        iphone.phone().visualVoiceMail().addVoiceMailList(voiceMailMessagesList);
+        iphone.phone().visualVoiceMail().getAllVoiceMails();
+        
+        System.out.println("");
+        VoiceMailMessage voiceMailMsg = new VoiceMailMessage("Jacó", new AudioMessage("Message from Jacó"));
+        iphone.phone().visualVoiceMail().deleteVoiceMail(voiceMailMsg);
         iphone.phone().visualVoiceMail().getAllVoiceMails();
         
         

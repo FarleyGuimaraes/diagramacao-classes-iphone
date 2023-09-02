@@ -2,6 +2,7 @@ package src.iphone.apps;
 
 import src.iphone.interfaces.MobilePhone;
 import src.iphone.model.Contact;
+import src.iphone.model.VoiceMailMessage;
 
 public class Phone implements MobilePhone{
 
@@ -31,6 +32,10 @@ public class Phone implements MobilePhone{
 
     public VisualVoiceMail visualVoiceMail() {
         return visualVoiceMail;
+    }
+
+    public void startVoiceMail(VoiceMailMessage voiceMailMessage){
+        visualVoiceMail.startVoiceMail(voiceMailMessage);
     }
 
 }
