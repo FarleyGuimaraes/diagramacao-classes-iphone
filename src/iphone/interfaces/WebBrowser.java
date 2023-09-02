@@ -2,7 +2,7 @@ package src.iphone.interfaces;
 
 public interface WebBrowser {
     
-    public void displayPage(String website);
+    public void showPage(String website);
 
     public void addNewTab();
 

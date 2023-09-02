@@ -30,7 +30,7 @@ public class IphoneTest {
 
         
         System.out.println("\n--------------- app SAFARI ----------\n");
-        iphone.safari().displayPage("www.google.com");
+        iphone.safari().showPage("www.google.com");
         iphone.safari().addNewTab();
         iphone.safari().refreshPage();
 

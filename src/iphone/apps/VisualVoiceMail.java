@@ -22,7 +22,7 @@ public class VisualVoiceMail {
     }
 
     public void getAllVoiceMails() {
-        System.out.println("List of voicemail messages: " + voiceMailMessageList);
+        System.out.println("\nList of voicemail messages: " + voiceMailMessageList);
     }
 
     public void startVoiceMail(VoiceMailMessage voiceMailMessage) {

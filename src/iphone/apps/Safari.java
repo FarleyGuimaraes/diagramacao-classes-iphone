@@ -6,8 +6,8 @@ public class Safari implements WebBrowser{
 
     
     @Override
-    public void displayPage(String website) {
-        System.out.println("Displaying website " + website);
+    public void showPage(String website) {
+        System.out.println("Showing website " + website);
     }
     
     @Override
